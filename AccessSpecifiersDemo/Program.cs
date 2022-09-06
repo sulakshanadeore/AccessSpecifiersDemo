@@ -10,9 +10,12 @@ namespace AccessSpecifiersDemo
     {
         static void Main(string[] args)
         {
-            Employee emp = new Employee();
-            emp.Empid = 101;
-            emp.
+            //Employee emp = new Employee();
+            //emp.Empid = 101;
+            //emp.Password = "abc@123";
+            ATMMachine machine = new ATMMachine();
+            machine.ShowMenu();
+            Console.Read();
         }
     }
 }

@@ -16,7 +16,9 @@ namespace SpecifiersLibrary
     public class Employee
     {
         public int Empid { get; set; }
-        private string Password { get; set; }
+       public  string Password { private get; set; }
+        private string p;
+        
         protected int Salary { get; set; }
         internal string NickName { get; set; }
         protected internal string City { get; set; }
@@ -33,13 +35,34 @@ namespace SpecifiersLibrary
 
     class Supervisor
     {
+        public int MyProperty { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        public void MethodToInternalCall()
+        public virtual void  MethodToInternalCall()
         {
             Employee emp = new Employee();
-            emp.
+            
         
         
+        }
+    }
+    interface IA1 
+    {
+        int M1();
+        
+    }
+       
+    abstract class MyClass:Supervisor,IA1
+    {
+        private int i;
+        private int MyProperty { get; set; }
+        static int j;
+        public  int M1()
+        {
+            throw new NotImplementedException();
+        }
+        public sealed override void MethodToInternalCall()
+        {
+            
         }
     }
 }
